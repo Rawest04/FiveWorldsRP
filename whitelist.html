@@ -3,27 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Whitelist | Five Worlds RP</title>
+    <title>Whitelist | Coming Soon RP</title>
 
     <link rel="icon" type="img/png" href="logo.png">
 
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
     <style>
+        /* Font GTA Logo */
+        @font-face {
+            font-family: 'Pricedown';
+            src: url('https://db.onlinewebfonts.com/t/21539499806ad93f6bd9e928229b0116.woff2') format('woff2');
+        }
+
         :root {
             --orange: #00fbff;
             --dark: #000000;
-            --card-bg: rgba(10, 10, 10, 0.9);
-            --border: rgba(255, 140, 0, 0.2);
+            --card-bg: rgba(5, 5, 5, 0.95);
+            --border: rgba(0, 251, 255, 0.2);
+            --gta-font: 'Pricedown', sans-serif;
+            --gta-sub: 'Archivo Black', sans-serif;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
         
         body {
-            background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.95)), 
-                        url('https://cdn.discordapp.com/attachments/1427369168872673425/1466764842294837399/Banner_Discord.png?ex=69848635&is=698334b5&hm=4b3291ce6c86c5e39a1787e6fe05ff3066e104d3a6a2970eb089fbebdd63abd9&');
+            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.9)), 
+                        url('https://cdn.discordapp.com/attachments/1211714887731122324/1469661183027187752/Gemini_Generated_Image_75zcot75zcot75zc.png?ex=69887823&is=698726a3&hm=50d3e2e13a2e5a60a8f7087e0496cbe2d502d784c11e4a10d4fb6395284283a8&');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -37,28 +45,29 @@
             position: fixed; top: 0; width: 100%; height: 90px;
             display: flex; align-items: center; justify-content: space-between;
             padding: 0 6%; z-index: 1000;
-            background: rgba(0,0,0,0.9);
+            background: rgba(0,0,0,0.95);
             backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(255,255,255,0.05);
+            border-bottom: 2px solid var(--border);
         }
 
         .logo-area { display: flex; align-items: center; gap: 12px; }
-        .brand { font-weight: 900; font-size: 1.3rem; text-transform: uppercase; letter-spacing: 1px; }
+        .brand { font-family: var(--gta-font); font-size: 1.8rem; text-transform: capitalize; }
         .orange { color: var(--orange); }
 
         .nav-links { display: flex; list-style: none; gap: 25px; }
-        .nav-links a { color: white; text-decoration: none; font-weight: 700; font-size: 0.8rem; text-transform: uppercase; opacity: 0.6; transition: 0.3s; }
+        .nav-links a { 
+            font-family: var(--gta-sub);
+            color: white; text-decoration: none; font-size: 0.8rem; 
+            text-transform: uppercase; opacity: 0.6; transition: 0.3s;
+            font-style: italic;
+        }
         .nav-links a:hover, .nav-links a.active { opacity: 1; color: var(--orange); }
 
-        .play-btn { background: var(--orange); color: black; padding: 10px 25px; border-radius: 5px; font-weight: 800; text-decoration: none; font-size: 0.8rem; }
-        .menu-btn {
-            display: none;
-            border: 1px solid rgba(255,255,255,0.1);
-            background: transparent;
-            color: white;
-            padding: 10px 12px;
-            border-radius: 8px;
-            font-size: 1rem;
+        .play-btn { 
+            font-family: var(--gta-sub);
+            background: var(--orange); color: black; padding: 10px 25px; 
+            border-radius: 4px; font-weight: 800; text-decoration: none; 
+            font-size: 0.8rem; font-style: italic;
         }
 
         /* WHITELIST CONTENT */
@@ -71,30 +80,43 @@
 
         .glass-card {
             background: var(--card-bg);
-            backdrop-filter: blur(20px);
-            border: 1px solid var(--border);
-            border-radius: 30px;
+            border: 2px solid var(--border);
+            border-radius: 4px; /* Angoli squadrati stile HUD */
             padding: 50px;
             width: 100%;
             max-width: 850px;
-            box-shadow: 0 30px 60px rgba(0,0,0,0.8);
+            box-shadow: 0 0 40px rgba(0, 251, 255, 0.1);
         }
 
-        h1 { font-size: 2.5rem; font-weight: 900; text-transform: uppercase; margin-bottom: 10px; text-align: center; }
-        .subtitle { text-align: center; color: #777; font-weight: 600; margin-bottom: 40px; }
+        h1 { 
+            font-family: var(--gta-font);
+            font-size: 3.5rem; 
+            margin-bottom: 10px; 
+            text-align: center; 
+            text-shadow: 3px 3px 0px rgba(0,0,0,0.8);
+        }
+        h1 span { color: var(--orange); }
+
+        .subtitle { 
+            font-family: var(--gta-sub);
+            text-align: center; color: #777; 
+            margin-bottom: 40px; text-transform: uppercase;
+            font-style: italic; letter-spacing: 1px;
+        }
 
         .form-section-title {
+            font-family: var(--gta-sub);
             color: var(--orange);
             text-transform: uppercase;
-            letter-spacing: 3px;
+            font-style: italic;
+            letter-spacing: 2px;
             margin: 40px 0 20px;
-            font-weight: 800;
-            font-size: 0.9rem;
+            font-size: 1rem;
             display: flex;
             align-items: center;
             gap: 15px;
         }
-        .form-section-title::after { content: ''; flex: 1; height: 1px; background: rgba(255, 140, 0, 0.2); }
+        .form-section-title::after { content: ''; flex: 1; height: 2px; background: var(--border); }
 
         .form-grid {
             display: grid;
@@ -105,21 +127,21 @@
         .full-width { grid-column: span 2; }
 
         .input-group label {
+            font-family: var(--gta-sub);
             display: block;
             font-size: 0.75rem;
-            font-weight: 800;
             text-transform: uppercase;
+            font-style: italic;
             margin-bottom: 8px;
-            color: #555;
-            letter-spacing: 1px;
+            color: #888;
         }
 
         .input-group input, .input-group textarea {
             width: 100%;
-            background: rgba(255, 255, 255, 0.03);
+            background: rgba(255, 255, 255, 0.05);
             border: 1px solid rgba(255, 255, 255, 0.1);
             padding: 15px;
-            border-radius: 12px;
+            border-radius: 4px;
             color: white;
             font-family: 'Montserrat', sans-serif;
             font-weight: 600;
@@ -129,59 +151,55 @@
 
         .input-group input:focus, .input-group textarea:focus {
             border-color: var(--orange);
-            background: rgba(255, 140, 0, 0.05);
-            box-shadow: 0 0 15px rgba(255, 140, 0, 0.1);
+            background: rgba(0, 251, 255, 0.05);
         }
 
         .btn-send {
+            font-family: var(--gta-sub);
             width: 100%;
             margin-top: 50px;
             padding: 20px;
             background: var(--orange);
             border: none;
-            border-radius: 12px;
+            border-radius: 4px;
             color: black;
-            font-weight: 900;
+            font-size: 1.2rem;
             text-transform: uppercase;
-            letter-spacing: 2px;
+            font-style: italic;
             cursor: pointer;
             transition: 0.3s;
         }
 
         .btn-send:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(255, 140, 0, 0.3);
+            transform: scale(1.02);
             filter: brightness(1.1);
+            box-shadow: 0 0 20px rgba(0, 251, 255, 0.3);
         }
 
         #status-msg {
             margin-top: 25px;
             text-align: center;
             padding: 15px;
-            border-radius: 12px;
+            border-radius: 4px;
             display: none;
-            font-weight: 700;
+            font-family: var(--gta-sub);
+            font-style: italic;
+            text-transform: uppercase;
         }
 
-        footer { text-align: center; padding: 50px; opacity: 0.3; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; font-size: 0.8rem; }
+        footer { 
+            font-family: var(--gta-sub);
+            text-align: center; padding: 80px; color: #444; 
+            font-style: italic; text-transform: uppercase; 
+        }
 
         @media (max-width: 768px) {
-            body { background-attachment: scroll; }
             .form-grid { grid-template-columns: 1fr; }
             .full-width { grid-column: span 1; }
             .glass-card { padding: 30px; }
-            .navbar { height: 80px; padding: 0 5%; }
-            .play-btn { padding: 10px 16px; font-size: 0.75rem; }
-            .nav-links { 
-                display: none; 
-                position: absolute; 
-                top: 80px; right: 5%; left: 5%;
-                flex-direction: column; gap: 12px;
-                background: #050505; padding: 16px; border-radius: 12px;
-                border: 1px solid #111;
-            }
-            .nav-links.show { display: flex; }
-            .menu-btn { display: inline-flex; align-items: center; justify-content: center; }
+            .navbar { height: 80px; }
+            .nav-links { display: none; }
+            h1 { font-size: 2.5rem; }
         }
     </style>
 </head>
@@ -189,55 +207,46 @@
 
     <header class="navbar">
         <div class="logo-area">
-            <i class="fa-solid fa-crown" style="font-size: 1.8rem; color: var(--orange);"></i>
             <div class="logo-text">
-                <span class="brand">Five Worlds <span class="orange">RP</span></span>
+                <span class="brand">Coming Soon <span class="orange">RP</span></span>
             </div>
         </div>
         <ul class="nav-links">
-            <li><a href="index.html" class="active">Home</a></li>
-            <li><a href="progetto.html" class="active">Progetto</a></li>
-            <li><a href="regolamento.html" class="active">Regolamento</a></li>
-            <li><a href="come-giocare.html" class="active">Come Giocare</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="progetto.html">Progetto</a></li>
+            <li><a href="regolamento.html">Regolamento</a></li>
+            <li><a href="come-giocare.html">Come Giocare</a></li>
             <li><a href="whitelist.html" class="active">Whitelist</a></li>
-            <li><a href="staff.html" class="active">Staff</a></li>
         </ul>
         <a href="fivem://connect/IP" class="play-btn">GIOCA ORA</a>
-        <button class="menu-btn" type="button" aria-label="Apri menu">
-            <i class="fa-solid fa-bars"></i>
-        </button>
     </header>
     
     <main class="whitelist-container">
-        <div class="glass-card" data-aos="zoom-in">
+        <div class="glass-card" data-aos="fade-up">
             <h1>Richiesta <span>Whitelist</span></h1>
-            <p class="subtitle">Entra a far parte della nostra community d'élite.</p>
+            <p class="subtitle">Registrazione nuovo cittadino - Los Santos</p>
 
             <form id="whitelistForm">
-                <div class="form-section-title">Informazioni OOC (Real Life)</div>
+                <div class="form-section-title">01 - Dati Out Of Character</div>
                 <div class="form-grid">
                     <div class="input-group">
-                        <label>Età</label>
+                        <label>Età Reale</label>
                         <input type="number" id="ooc_eta" placeholder="Es. 20" required>
                     </div>
                     <div class="input-group">
                         <label>Steam HEX</label>
                         <input type="text" id="ooc_hex" placeholder="steam:1100001..." required>
                     </div>
-                    <div class="input-group">
-                        <label>Link Profilo Steam</label>
-                        <input type="url" id="ooc_steam_url" placeholder="https://steamcommunity.com/..." required>
-                    </div>
                     <div class="input-group full-width">
-                        <label>Esperienze Precedenti</label>
-                        <textarea id="ooc_exp" placeholder="Descrivi brevemente i server dove hai giocato e le ore totali..." rows="3" required></textarea>
+                        <label>Link Profilo Steam</label>
+                        <input type="url" id="ooc_steam_url" placeholder="https://steamcommunity.com/id/tuoprofilo" required>
                     </div>
                 </div>
 
-                <div class="form-section-title">Informazioni IC (In Game)</div>
+                <div class="form-section-title">02 - Dati In Character</div>
                 <div class="form-grid">
                     <div class="input-group">
-                        <label>Nome Personaggio</label>
+                        <label>Nome e Cognome Personaggio</label>
                         <input type="text" id="ic_nome" placeholder="Es. Tony Montana" required>
                     </div>
                     <div class="input-group">
@@ -246,40 +255,34 @@
                     </div>
                     <div class="input-group full-width">
                         <label>Storia del Personaggio (Background)</label>
-                        <textarea id="ic_bg" placeholder="Raccontaci chi è il tuo personaggio e quali sono i suoi obiettivi a Los Santos..." rows="6" required></textarea>
+                        <textarea id="ic_bg" placeholder="Raccontaci le origini e gli obiettivi del tuo PG..." rows="6" required></textarea>
                     </div>
                     <div class="input-group full-width">
-                        <label>Vizzi/Dipendenze</label>
-                        <textarea id="ic_vizzi" placeholder="Raccontaci eventuali vizzi o dipendenze del tuo personaggio..." rows="6" required></textarea>
+                        <label>Vizi e Dipendenze</label>
+                        <textarea id="ic_vizzi" placeholder="Esempi: alcolismo, fumo, dipendenza da droga..." rows="4" required></textarea>
                     </div>
                     <div class="input-group full-width">
                         <label>Precedenti Penali</label>
-                        <textarea id="ic_penali" placeholder="Raccontaci eventuali precedenti penali del tuo personaggio..." rows="6" required></textarea>
+                        <textarea id="ic_penali" placeholder="Il tuo PG è già noto alle autorità?" rows="4" required></textarea>
                     </div>
                 </div>
 
-                <button type="submit" class="btn-send">Invia Candidatura</button>
+                <button type="submit" class="btn-send">Sottometti Candidatura</button>
                 <div id="status-msg"></div>
             </form>
         </div>
     </main>
 
     <footer>
-        © 2026 Five Worlds RP — Elite Roleplay Experience — RAWEST89
+        © 2026 COMING SOON — ELITE ROLEPLAY EXPERIENCE — RAWEST89
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
     <script>
         AOS.init({ duration: 1000, once: true });
 
-        const WEBHOOK_URL = "https://discord.com/api/webhooks/1468629319315095618/v7n12E0icRaqka1qvSh5Zay4Iv3GuJVB1LriDZBGWnztnAskxwoYEcarO-TYpP_ZFOfy";
-        const menuBtn = document.querySelector('.menu-btn');
-        const navLinks = document.querySelector('.nav-links');
-        if (menuBtn && navLinks) {
-            menuBtn.addEventListener('click', () => {
-                navLinks.classList.toggle('show');
-            });
-        }
+        // WEBHOOK URL INTEGRATO
+        const WEBHOOK_URL = "webhook_url_inserito_qui";
 
         document.getElementById('whitelistForm').addEventListener('submit', function(e) {
             e.preventDefault();
@@ -291,20 +294,20 @@
             btn.innerText = "TRASMISSIONE IN CORSO...";
 
             const embedData = {
-                username: "Five Worlds Whitelist",
+                username: "Sistema Whitelist - Coming Soon",
                 embeds: [{
-                    title: "📩 NUOVA RICHIESTA WHITELIST",
+                    title: "📩 NUOVA CANDIDATURA WHITELIST",
                     color: 64511, // Ciano
                     fields: [
-                        { name: "👤 UTENTE OOC", value: `**Età:** ${document.getElementById('ooc_eta').value}`, inline: true },
-                        { name: "🆔 IDENTIFICATIVI", value: `**HEX:** \`${document.getElementById('ooc_hex').value}\`\n[Profilo Steam](${document.getElementById('ooc_steam_url').value})`, inline: true },
+                        { name: "👤 UTENTE OOC", value: `**Età:** ${document.getElementById('ooc_eta').value}\n**HEX:** \`${document.getElementById('ooc_hex').value}\``, inline: true },
+                        { name: "🔗 STEAM", value: `[Link Profilo](${document.getElementById('ooc_steam_url').value})`, inline: true },
                         { name: "📖 ESPERIENZA", value: document.getElementById('ooc_exp').value },
                         { name: "🎭 PERSONAGGIO IC", value: `**Nome:** ${document.getElementById('ic_nome').value}\n**Età:** ${document.getElementById('ic_eta').value}` },
                         { name: "📜 STORIA PG", value: document.getElementById('ic_bg').value },
-                        { name: "💊 VIZZI/DIPENDENZE", value: document.getElementById('ic_vizzi').value },
-                        { name: "⚖️ PRECEDENTI PENALI", value: document.getElementById('ic_penali').value }
+                        { name: "💊 VIZI/DIPENDENZE", value: document.getElementById('ic_vizzi').value },
+                        { name: "⚖️ PRECEDENTI", value: document.getElementById('ic_penali').value }
                     ],
-                    footer: { text: "Candidatura ricevuta dal sito ufficiale" },
+                    footer: { text: "Richiesta inviata dal portale web Coming Soon RP" },
                     timestamp: new Date()
                 }]
             };
@@ -317,27 +320,25 @@
             .then(response => {
                 status.style.display = "block";
                 if (response.ok) {
-                    status.style.background = "rgba(46, 204, 113, 0.1)";
-                    status.style.color = "#2ecc71";
-                    status.innerText = "✅ RICHIESTA INVIATA! Controlla Discord per l'esito.";
+                    status.style.background = "rgba(0, 251, 255, 0.1)";
+                    status.style.color = "#00fbff";
+                    status.innerText = "✅ TRASMISSIONE COMPLETATA! Attendi risposta su Discord.";
                     e.target.reset();
                 } else { throw new Error(); }
             })
             .catch(() => {
                 status.style.display = "block";
-                status.style.background = "rgba(231, 76, 60, 0.1)";
-                status.style.color = "#e74c3c";
-                status.innerText = "❌ ERRORE! Riprova più tardi.";
+                status.style.background = "rgba(255, 0, 0, 0.1)";
+                status.style.color = "#ff3e3e";
+                status.innerText = "❌ ERRORE DI TRASMISSIONE! Riprova.";
             })
             .finally(() => {
                 btn.disabled = false;
-                btn.innerText = "INVIA CANDIDATURA";
+                btn.innerText = "SOTTOMETTI CANDIDATURA";
             });
         });
     </script>
-
 </body>
 </html>
-
 
 
