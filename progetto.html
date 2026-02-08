@@ -5,14 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Il Progetto | Coming Soon RP</title>
 
-    <link rel="icon" type="img/png" href="logo.png">
+    <link rel="icon" type="image/png" href="logo.png">
     
     <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
     <style>
-        /* Font GTA Logo */
         @font-face {
             font-family: 'Pricedown';
             src: url('https://db.onlinewebfonts.com/t/21539499806ad93f6bd9e928229b0116.woff2') format('woff2');
@@ -34,65 +33,60 @@
             color: white;
             font-family: 'Montserrat', sans-serif;
             overflow-x: hidden;
-            line-height: 1.6;
+            line-height: 1.5;
         }
 
-        /* NAVBAR */
+        /* NAVBAR MOBILE-READY */
         .navbar {
-            position: fixed; top: 0; width: 100%; height: 100px;
+            position: fixed; top: 0; width: 100%; height: 80px;
             display: flex; align-items: center; justify-content: space-between;
-            padding: 0 6%; z-index: 1000;
+            padding: 0 5%; z-index: 1000;
             background: rgba(0,0,0,0.95);
             border-bottom: 2px solid var(--border);
             backdrop-filter: blur(10px);
         }
 
-        .logo-area { display: flex; align-items: center; gap: 12px; }
-        .brand { font-family: var(--gta-font); font-size: 1.8rem; text-transform: capitalize; }
+        .logo-area { display: flex; align-items: center; gap: 10px; }
+        .brand { font-family: var(--gta-font); font-size: clamp(1.2rem, 4vw, 1.8rem); text-transform: capitalize; }
         .orange { color: var(--orange); }
 
-        .nav-links { display: flex; list-style: none; gap: 25px; }
+        .nav-links { display: flex; list-style: none; gap: 20px; }
         .nav-links a { 
-            font-family: var(--gta-sub);
-            color: white; text-decoration: none; font-size: 0.85rem; 
-            text-transform: uppercase; opacity: 0.6; transition: 0.3s;
-            font-style: italic;
+            font-family: var(--gta-sub); color: white; text-decoration: none; 
+            font-size: 0.75rem; text-transform: uppercase; opacity: 0.6; 
+            transition: 0.3s; font-style: italic;
         }
         .nav-links a:hover, .nav-links a.active { opacity: 1; color: var(--orange); }
 
         .play-btn { 
-            font-family: var(--gta-sub);
-            background: var(--orange); color: black; padding: 12px 30px; 
-            border-radius: 4px; font-weight: 900; text-decoration: none; 
-            font-size: 0.85rem; font-style: italic; transition: 0.3s;
+            font-family: var(--gta-sub); background: var(--orange); color: black; 
+            padding: 8px 18px; border-radius: 4px; font-weight: 900; 
+            text-decoration: none; font-size: 0.75rem; font-style: italic;
         }
 
-        /* HEADER */
+        /* HEADER RESPONSIVE */
         .project-header {
-            padding: 200px 8% 100px;
+            padding: 140px 5% 60px;
             text-align: center;
             background: linear-gradient(to bottom, #0c0c0c, var(--dark));
         }
         .project-header h1 { 
             font-family: var(--gta-font);
-            font-size: clamp(3rem, 8vw, 6rem); 
-            text-transform: capitalize;
-            text-shadow: 4px 4px 0px rgba(0,0,0,0.8);
+            font-size: clamp(2.5rem, 10vw, 5.5rem); 
+            text-shadow: 3px 3px 0px rgba(0,0,0,0.8);
         }
         .project-header h1 span { color: var(--orange); }
         .pre-title { 
-            font-family: var(--gta-sub);
-            color: var(--orange); letter-spacing: 4px; font-size: 0.9rem; 
-            text-transform: uppercase; display: block; margin-bottom: 15px;
-            font-style: italic;
+            font-family: var(--gta-sub); color: var(--orange); letter-spacing: 2px; 
+            font-size: 0.7rem; text-transform: uppercase; display: block; margin-bottom: 10px; font-style: italic;
         }
 
-        /* SEZIONI CONTENUTO */
+        /* SEZIONI CONTENUTO RESPONSIVE */
         .content-section {
-            padding: 120px 10%;
+            padding: 80px 10%;
             display: flex;
             align-items: center;
-            gap: 80px;
+            gap: 40px;
             position: relative;
         }
 
@@ -111,46 +105,42 @@
         }
 
         .content-image i {
-            font-size: 10rem;
+            font-size: clamp(5rem, 15vw, 8rem);
             color: var(--orange);
-            filter: drop-shadow(0 0 20px rgba(0, 251, 255, 0.3));
-        }
-
-        /* Effetto decorativo dietro l'icona */
-        .content-image::before {
-            content: '';
-            position: absolute;
-            width: 200px; height: 200px;
-            background: var(--orange);
-            filter: blur(150px);
-            opacity: 0.1;
-            z-index: -1;
+            filter: drop-shadow(0 0 15px rgba(0, 251, 255, 0.3));
         }
 
         .content-text { flex: 1.2; }
         .content-text h2 { 
             font-family: var(--gta-sub);
-            font-size: 2.8rem; font-weight: 900; margin-bottom: 25px; 
-            text-transform: uppercase; font-style: italic;
-            line-height: 1;
+            font-size: clamp(1.8rem, 5vw, 2.8rem); 
+            margin-bottom: 20px; text-transform: uppercase; 
+            font-style: italic; line-height: 1.1;
         }
         .content-text h2 span { color: var(--orange); }
-        .content-text p { font-size: 1.1rem; color: #aaa; margin-bottom: 20px; font-weight: 500; }
+        .content-text p { font-size: clamp(0.9rem, 2vw, 1.1rem); color: #aaa; margin-bottom: 15px; font-weight: 500; }
 
         /* FOOTER */
-        footer { padding: 80px 0; border-top: 2px solid var(--border); text-align: center; margin-top: 50px; }
+        footer { padding: 60px 0; border-top: 2px solid var(--border); text-align: center; margin-top: 40px; }
         .footer-copy { 
-            font-family: var(--gta-sub);
-            color: #444; font-size: 0.9rem;
-            text-transform: uppercase; letter-spacing: 2px; font-style: italic;
+            font-family: var(--gta-sub); color: #444; font-size: 0.75rem;
+            text-transform: uppercase; letter-spacing: 1px; font-style: italic;
         }
 
+        /* MEDIA QUERIES MOBILE */
         @media (max-width: 992px) {
-            .content-section { flex-direction: column !important; text-align: center; padding: 80px 6%; gap: 40px; }
-            .content-text h2 { font-size: 2.2rem; }
-            .project-header h1 { font-size: 3rem; }
-            .navbar { height: 80px; }
+            .navbar { height: 70px; }
             .nav-links { display: none; }
+            
+            .content-section { 
+                flex-direction: column !important; 
+                text-align: center; 
+                padding: 60px 6%; 
+                gap: 30px; 
+            }
+            
+            .content-text h2 { margin-bottom: 15px; }
+            .content-image i { margin-bottom: 10px; }
         }
     </style>
 </head>
@@ -158,9 +148,7 @@
 
     <header class="navbar">
         <div class="logo-area">
-            <div class="logo-text">
-                <span class="brand">Coming Soon <span class="orange">RP</span></span>
-            </div>
+            <span class="brand">Coming Soon <span class="orange">RP</span></span>
         </div>
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
@@ -169,7 +157,7 @@
             <li><a href="come-giocare.html">Come Giocare</a></li>
             <li><a href="whitelist.html">Whitelist</a></li>
         </ul>
-        <a href="fivem://connect/IP" class="play-btn">GIOCA ORA</a>
+        <a href="fivem://connect/1469263320417566802" class="play-btn">GIOCA ORA</a>
     </header>
 
     <div class="project-header">
@@ -181,7 +169,7 @@
         <div class="content-image" data-aos="zoom-in">
             <i class="fa-solid fa-rocket"></i>
         </div>
-        <div class="content-text" data-aos="fade-left">
+        <div class="content-text" data-aos="fade-up">
             <h2>La nostra <span>Mission</span></h2>
             <p>Coming Soon RP nasce con un obiettivo chiaro: ridefinire gli standard del RolePlay italiano. Non siamo solo un server, ma un ecosistema progettato per chi cerca serietà, immersione e divertimento.</p>
             <p>Abbiamo rimosso ogni ostacolo tecnico per permetterti di concentrarti solo sulla tua storia. Che tu voglia essere un magnate del crimine o un cittadino modello, qui troverai gli strumenti giusti.</p>
@@ -192,7 +180,7 @@
         <div class="content-image" data-aos="zoom-in">
             <i class="fa-solid fa-microchip"></i>
         </div>
-        <div class="content-text" data-aos="fade-right">
+        <div class="content-text" data-aos="fade-up">
             <h2>Tecnologia <span>Top Level</span></h2>
             <p>La fluidità è tutto. Il nostro hardware dedicato garantisce FPS stabili e un sistema di sincronizzazione dati ultra-rapido. Dimentica i fastidiosi cali di frame durante le scene più concitate.</p>
             <p>Grazie a script ottimizzati e un core custom, offriamo dinamiche di gioco uniche: dall'economia realistica alla gestione avanzata dei veicoli, tutto è sotto il tuo controllo.</p>
@@ -203,7 +191,7 @@
         <div class="content-image" data-aos="zoom-in">
             <i class="fa-solid fa-handshake-angle"></i>
         </div>
-        <div class="content-text" data-aos="fade-left">
+        <div class="content-text" data-aos="fade-up">
             <h2>Community <span>Attiva</span></h2>
             <p>Un server vive grazie ai suoi player. Il nostro staff non si limita a moderare, ma lavora fianco a fianco con la community per implementare suggerimenti e nuove feature ogni settimana.</p>
             <p>Supporto Discord 24/7, eventi periodici e una gestione trasparente rendono Coming Soon RP il posto ideale dove iniziare la tua nuova vita virtuale.</p>
@@ -216,7 +204,7 @@
 
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
     <script>
-        AOS.init({ duration: 1000, once: true });
+        AOS.init({ duration: 800, once: true });
     </script>
 </body>
 </html>
