@@ -30,17 +30,22 @@
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
         
+        /* Aggiunto sfondo al body per coerenza */
         body {
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.8)), 
-                        url('https://cdn.discordapp.com/attachments/1470162639106609253/1472209672776978543/IMG_0770.png?ex=6992665a&is=699114da&hm=22d6c0cf2adb1f7a69a0b78528b8d5b6781c294a507fca6d39f50527332d598c&');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            background-repeat: no-repeat;
+            background-color: var(--dark);
             color: white;
             font-family: 'Montserrat', sans-serif;
-            line-height: 1.6;
-            overflow-x: hidden;
+        }
+
+        
+        .rules-page-bg {
+            min-height: 100vh;
+            width: 100%;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)), 
+                        url('sfondo2.0.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed; 
         }
 
         /* NAVBAR STILIZZATA */
@@ -66,7 +71,7 @@
         }
         .back-home:hover { background: var(--gold); color: black; box-shadow: 0 0 20px var(--gold); }
 
-        /* HEADER CON EFFETTO */
+        /* HEADER */
         .rules-header { padding: 160px 5% 60px; text-align: center; }
         .rules-header h1 { 
             font-family: var(--gta-font); font-size: clamp(3rem, 10vw, 5.5rem); 
@@ -82,7 +87,7 @@
         }
 
         /* CONTAINER REGOLAMENTO */
-        .rules-container { max-width: 950px; margin: 0 auto 100px; padding: 0 20px; }
+        .rules-container { max-width: 950px; margin: 0 auto 0; padding: 0 20px 100px; }
 
         .rule-section {
             background: var(--card-bg); 
@@ -181,75 +186,74 @@
 </head>
 <body>
 
-    <nav class="navbar">
-        <a href="index.html" class="brand">GDR <span class="gold-text">PROJECT</span></a>
-        <a href="index.html" class="back-home"><i class="fas fa-arrow-left"></i> Home</a>
-    </nav>
+    <div class="rules-page-bg">
+        <nav class="navbar">
+            <a href="index.html" class="brand">GDR <span class="gold-text">PROJECT</span></a>
+            <a href="index.html" class="back-home"><i class="fas fa-arrow-left"></i> Home</a>
+        </nav>
 
-    <header class="rules-header">
-        <h1 data-aos="zoom-in">Regolamento</h1>
-        <p data-aos="fade-up" data-aos-delay="300">Esperienza Roleplay d'Elite — Ver. 2.1</p>
-    </header>
+        <header class="rules-header">
+            <h1 data-aos="zoom-in">Regolamento</h1>
+            <p data-aos="fade-up" data-aos-delay="300">Esperienza Roleplay d'Elite — Ver. 2.1</p>
+        </header>
 
-    <div class="rules-container">
-        
-      
-        <div class="rule-section" data-aos="fade-up" style="border-left: 4px solid #ff4d4d;">
-            <div class="rule-title">
-                <span><span style="color: #ff4d4d;">01.</span> Regolamento Generale</span>
-                <i class="fas fa-skull-crossbones"></i>
+        <div class="rules-container">
+            <div class="rule-section" data-aos="fade-up" style="border-left: 4px solid #ff4d4d;">
+                <div class="rule-title">
+                    <span><span style="color: #ff4d4d;">01.</span> Regolamento Generale</span>
+                    <i class="fas fa-skull-crossbones"></i>
+                </div>
+                <div class="rule-content">
+                    <p>Linee guida del server.</p>
+                    <a href="https://docs.google.com/document/d/1ELcTRgKcBK969knl5ntUP7evs80MkzhLuStxEUnKQG4/edit?tab=t.153czpyuc99c" target="_blank" class="btn-small btn-link">
+                        <i class="fas fa-file-invoice"></i> Apri Documento PDF
+                    </a>
+                </div>
             </div>
-            <div class="rule-content">
-                <p>Linee guida del server.</p>
-                <a href="https://docs.google.com/document/d/1ELcTRgKcBK969knl5ntUP7evs80MkzhLuStxEUnKQG4/edit?tab=t.153czpyuc99c" target="_blank" class="btn-small btn-link">
-                    <i class="fas fa-file-invoice"></i> Apri Documento PDF
-                </a>
+
+            <div class="rule-section" data-aos="fade-up" style="border-left: 4px solid #ff4d4d;">
+                <div class="rule-title">
+                    <span><span style="color: #ff4d4d;">02.</span> Regolamento Illegalità</span>
+                    <i class="fas fa-skull-crossbones"></i>
+                </div>
+                <div class="rule-content">
+                    <p>Tutte le norme sulle rapine, sequestri e conflitti tra gang sono dettagliate nel documento ufficiale.</p>
+                    <a href="https://docs.google.com/document/d/18Z9GvTGH5uskHBYFUlF3nBYD4ttF248u30vTv1cOiOY/edit?usp=sharing" target="_blank" class="btn-small btn-link">
+                        <i class="fas fa-file-invoice"></i> Apri Documento PDF
+                    </a>
+                </div>
+            </div>
+
+            <div class="rule-section" data-aos="fade-up" style="border-left: 4px solid var(--gold);">
+                <div class="rule-title">
+                    <span><span class="gold-text">03.</span> Regolamento Street Racer</span>
+                    <i class="fas fa-users"></i>
+                </div>
+                <div class="rule-content">
+                    <p>Chiunque potrà partecipare alle corse con il giusto inserimento nel settore, abbiate il buon senso e seguite le regole.</p>
+                    <a href="https://docs.google.com/document/d/1ELcTRgKcBK969knl5ntUP7evs80MkzhLuStxEUnKQG4/edit?tab=t.tnjsiwu7ywb#heading=h.y61mcbmxyll2" target="_blank" class="btn-small btn-link">
+                        <i class="fas fa-shield-halved"></i> Leggi Regolamento Crew
+                    </a>
+                </div>
+            </div>
+
+            <div class="rule-section" data-aos="fade-up">
+                <div class="rule-title">
+                    <span><span class="gold-text">04.</span> Supporto & Segnalazioni</span>
+                    <i class="fas fa-gavel"></i>
+                </div>
+                <div class="rule-content">
+                    <ul>
+                        <li>Il <span class="important">Buon Senso</span> è la regola d'oro.</li>
+                        <li>Le decisioni dei moderatori durante le azioni devono essere rispettate istantaneamente.</li>
+                        <li>Segnalazioni e ticket vengono gestiti esclusivamente sul nostro server Discord ufficiale.</li>
+                    </ul>
+                    <a href="https://discord.gg/zvAXeA6dUY" target="_blank" class="btn-small btn-discord">
+                        <i class="fab fa-discord"></i> Entra in Assistenza
+                    </a>
+                </div>
             </div>
         </div>
-
-        <div class="rule-section" data-aos="fade-up" style="border-left: 4px solid #ff4d4d;">
-            <div class="rule-title">
-                <span><span style="color: #ff4d4d;">02.</span> Regolamento Illegalità</span>
-                <i class="fas fa-skull-crossbones"></i>
-            </div>
-            <div class="rule-content">
-                <p>Tutte le norme sulle rapine, sequestri e conflitti tra gang sono dettagliate nel documento ufficiale.</p>
-                <a href="https://docs.google.com/document/d/18Z9GvTGH5uskHBYFUlF3nBYD4ttF248u30vTv1cOiOY/edit?usp=sharing" target="_blank" class="btn-small btn-link">
-                    <i class="fas fa-file-invoice"></i> Apri Documento PDF
-                </a>
-            </div>
-        </div>
-
-        <div class="rule-section" data-aos="fade-up" style="border-left: 4px solid var(--gold);">
-            <div class="rule-title">
-                <span><span class="gold-text">03.</span> Regolamento Street Racer</span>
-                <i class="fas fa-users"></i>
-            </div>
-            <div class="rule-content">
-                <p>Chiunque potrà partecipare alle corse con il giusto inserimento nel settore, abbiate il buon senso e seguite le regole.</p>
-                <a href="https://docs.google.com/document/d/1ELcTRgKcBK969knl5ntUP7evs80MkzhLuStxEUnKQG4/edit?tab=t.tnjsiwu7ywb#heading=h.y61mcbmxyll2" target="_blank" class="btn-small btn-link">
-                    <i class="fas fa-shield-halved"></i> Leggi Regolamento Crew
-                </a>
-            </div>
-        </div>
-
-        <div class="rule-section" data-aos="fade-up">
-            <div class="rule-title">
-                <span><span class="gold-text">04.</span> Supporto & Segnalazioni</span>
-                <i class="fas fa-gavel"></i>
-            </div>
-            <div class="rule-content">
-                <ul>
-                    <li>Il <span class="important">Buon Senso</span> è la regola d'oro.</li>
-                    <li>Le decisioni dei moderatori durante le azioni devono essere rispettate istantaneamente.</li>
-                    <li>Segnalazioni e ticket vengono gestiti esclusivamente sul nostro server Discord ufficiale.</li>
-                </ul>
-                <a href="https://discord.gg/zvAXeA6dUY" target="_blank" class="btn-small btn-discord">
-                    <i class="fab fa-discord"></i> Entra in Assistenza
-                </a>
-            </div>
-        </div>
-
     </div>
 
     <footer>
@@ -270,6 +274,7 @@
     </script>
 </body>
 </html>
+
 
 
 
